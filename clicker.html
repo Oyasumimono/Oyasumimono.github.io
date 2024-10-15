@@ -1,0 +1,34 @@
+<html>
+<head>
+<style>
+
+</style>    
+</head>
+<body>
+
+<img id="cat" src="https://static.wikia.nocookie.net/five-nights-at-treasure-island-rp/images/b/ba/Huh_Cat_Promo.png/revision/latest?cb=20240209214204" alt="Image no work" width="700" height="400">
+<h1 id="score">score = 0</h1>
+<h1 id="upgrade"> "Upgrade Huh"</h1>
+
+</body>
+</html>
+
+<script>
+document.getElementById("cat").addEventListener("click",up)
+
+var score = 0
+var clickperclick = 1
+
+function up(){
+  score=score + 1
+  document.getElementById("score").innerHTML = "score ="+ score;
+  console.log(score)
+}
+
+function upgrade(){
+  clicksperclick=clicksperclick + 1
+  document.getElementById("clicksperclick").innerHTML = "score ="+ score + 2;
+  console.log(score)
+}
+
+</script>

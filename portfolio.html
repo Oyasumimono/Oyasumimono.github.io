@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 1;
+            padding: 1;
+            box-sizing: border-box;
+        }
+
+        /* Styling for the body */
+        body {
+            font-family: 'Times New Roman', sans-serif;
+            background-color: #000e4f;
+            color: #000206;
+            line-height: 2.5;
+            padding: 20px;
+        }
+
+        /* Navigation styling */
+        nav {
+            background: #7765e0;
+            color: #050008;
+            padding: 10px 0;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        nav h1 {
+            margin-bottom: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #270133;
+            text-decoration: none;
+        }
+
+        /* Main content styling */
+        main {
+            margin-top: 20px;
+        }
+
+        .content {
+            background: #8321f3;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .content h1 {
+            color: black;
+            margin-bottom: 20px;
+        }
+
+        /* Portfolio list styling */
+        #portfolio {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        #portfolio li {
+            background: #e2acf1;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        #portfolio li:hover {
+            background: #fa01d0;
+        }
+
+        #portfolio a {
+            text-decoration: none;
+            color: #060000;
+        }
+
+        /* Responsive web design */
+        @media screen and (max-width: 767px) {
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="all-contents">
+        <!-- Navigation -->
+        <nav>
+            <h1>My Portfolio</h1>
+            <ul id="nav-ul">
+                <li class="nav-li"><a class="nav-a" href="index.html">Home</a></li>
+                <li class="nav-li"><a class="nav-a" href="portfolio.html">Portfolio</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main>
+            <div class="content">
+                <h1>Portfolio</h1>
+                <ul id="portfolio">
+                    <li><a href="https://orange-happiness-97qp9vpq597x279g5-5500.app.github.dev/platformerJS.html">Platformer: A cannon-dodging, collectible-grabbing adventure game for Halleb0t</a>
+                    <li><a href="https://orange-happiness-97qp9vpq597x279g5-5500.app.github.dev/clicker.html">Clicker: A cat clicking game</a></li>
+                     </ul>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
+
+
