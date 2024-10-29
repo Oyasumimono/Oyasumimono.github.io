@@ -17,7 +17,7 @@
 document.getElementById("cat").addEventListener("click",up)
 
 var score = 0
-var clickperclick = 1
+var clickperclick = 0
 
 function up(){
   score=score + 1
@@ -25,9 +25,11 @@ function up(){
   console.log(score)
 }
 
+  document.getElementById("upgrade").addEventListener("click",upgrade)
+
 function upgrade(){
-  clicksperclick=clicksperclick + 1
-  document.getElementById("clicksperclick").innerHTML = "score ="+ score + 2;
+  if(clicksperclick=1)
+  document.getElementById("upgrade").innerHTML = "clicksperclick="+ test!!!;
   console.log(score)
 }
 
