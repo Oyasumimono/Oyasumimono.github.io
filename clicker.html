@@ -1,36 +1,46 @@
 <html>
-<head>
-<style>
 
-</style>    
+<head>
+  <style>
+
+  </style>
 </head>
+
 <body>
 
-<img id="cat" src="https://static.wikia.nocookie.net/five-nights-at-treasure-island-rp/images/b/ba/Huh_Cat_Promo.png/revision/latest?cb=20240209214204" alt="Image no work" width="700" height="400">
-<h1 id="score">score = 0</h1>
-<h1 id="upgrade"> "Upgrade Huh"</h1>
-<button id="upgrade">Upgrade Haiii</button>
+  <img id="cat"
+    src="https://static.wikia.nocookie.net/five-nights-at-treasure-island-rp/images/b/ba/Huh_Cat_Promo.png/revision/latest?cb=20240209214204"
+    alt="Image no work" width="700" height="400">
+  <button id="makeUpgrade">Upgrade</button>
+  <h2 id="scoreDisplay">score</h2>
 </body>
+
 </html>
 
 <script>
 
-var score = 0
-var clickperclick = 0
+  var score = 0
+  var scorePerClick = 1
+  var upgradeCost = 5
 
-document.getElementById("cat").addEventListener("click",up)
+  document.getElementById("cat").addEventListener("click", add)
 
-function up(){
-  document.getElementById("cat").html + score + 1;
-  alert()
-}
+  function add() {
+    score = score + scorePerClick
+    document.getElementById("scoreDisplay").innerHTML = score
+  }
 
-  document.getElementById("upgrade").addEventListener("click",upgradebutton)
+  document.getElementById("makeUpgrade").addEventListener("click", upgradebutton)
 
-function upgradebutton(){
-  if(clicksperclick=1)
-  document.getElementById("upgrade").innerHTML = "clicksperclick=";
-  console.log(score)
-}
+  function upgradebutton() {
+    //add price to upgrade, reduce score after each upgrade.
+    if(score >= 5){
+      score = score - upgradeCost
+      scorePerClick = scorePerClick + 1
+      document.getElementById("scoreDisplay").innerHTML = score
+    } else{
+      alert("not enough cat money")
+    }
+  }
 
 </script>

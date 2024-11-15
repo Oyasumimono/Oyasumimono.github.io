@@ -11,6 +11,12 @@
     <img id="changeCat" src="https://static.wikia.nocookie.net/five-nights-at-treasure-island-rp/images/b/ba/Huh_Cat_Promo.png/revision/latest?cb=20240209214204" alt="Image no work" width="200" height="100">
     <p id="numUp">1</p>
     <script>
+        
+        var numUp=1
+        
+        
+        
+        
         document.getElementById("cat").addEventListener("click",alertCat)
         
         function alertCat(){
@@ -27,6 +33,13 @@
         function changeCatSize(){
         document.getElementById("changeCat").style.width = "500px"
         document.getElementById("changeCat").style.length = "500px"
+        }
+
+        document.getElementById("numUp").addEventListener("click",makeNumGoUp)
+
+        function makeNumGoUp(){
+            document.getElementById("numUp").innerHTML = numUp
+            numUp = numUp + 1
         }
     </script>
 </body>
