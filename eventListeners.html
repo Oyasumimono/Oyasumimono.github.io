@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+</style>
+</head>
+<body>
+    <p id="yummyText">Wowie, look at this cool text!</p>
+    <img id="cat" src="https://static.wikia.nocookie.net/five-nights-at-treasure-island-rp/images/b/ba/Huh_Cat_Promo.png/revision/latest?cb=20240209214204" alt="Image no work" width="400" height="200">
+    <img id="changeCat" src="https://static.wikia.nocookie.net/five-nights-at-treasure-island-rp/images/b/ba/Huh_Cat_Promo.png/revision/latest?cb=20240209214204" alt="Image no work" width="200" height="100">
+    <p id="numUp">1</p>
+    <script>
+        document.getElementById("cat").addEventListener("click",alertCat)
+        
+        function alertCat(){
+            alert("Cat!");
+        }
+
+        document.getElementById("yummyText").addEventListener("click",yummyTextChange)
+
+        function yummyTextChange(){
+            document.getElementById("yummyText").style.color="pink";
+        }
+        document.getElementById("changeCat").addEventListener("mouseover" ,changeCatSize)
+
+        function changeCatSize(){
+        document.getElementById("changeCat").style.width = "500px"
+        document.getElementById("changeCat").style.length = "500px"
+        }
+    </script>
+</body>
+</html>
