@@ -13,6 +13,7 @@
     alt="Image no work" width="700" height="400">
   <button id="makeUpgrade">Upgrade</button>
   <h2 id="scoreDisplay">score</h2>
+  <h3 id="costDisplay">cost</h3>
 </body>
 
 </html>
@@ -21,7 +22,8 @@
 
   var score = 0
   var scorePerClick = 1
-  var upgradeCost = 5
+  var cost = 5
+  
 
   document.getElementById("cat").addEventListener("click", add)
 
@@ -34,10 +36,12 @@
 
   function upgradebutton() {
     //add price to upgrade, reduce score after each upgrade.
-    if(score >= 5){
-      score = score - upgradeCost
+    if(score >= cost){
+      score = score - cost
       scorePerClick = scorePerClick + 1
       document.getElementById("scoreDisplay").innerHTML = score
+      cost = cost + 5
+      document.getElementById("costDisplay").innerHTML = cost
     } else{
       alert("not enough cat money")
     }

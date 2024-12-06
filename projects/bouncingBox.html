@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        div {
+            width: 30px;
+            height: 30px;
+            background-color: crimson;
+            position: absolute;
+            top: 250px;
+            left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+
+    <div id="pBox">
+
+    </div>
+    <script>
+        var positionY = 5
+        var positionX = 5
+        var speedX = 5
+        var speedY = 5
+        
+
+        setInterval(moveBox, 16)
+        document.getElementById("pBox").addEventListener("click", moveBox)
+        function moveBox() {
+          
+            positionX = positionX + speedX
+            document.getElementById("pBox").style.left = positionX + "px"
+            positionY = positionY + speedY
+            document.getElementById("pBox").style.top = positionY + "px"
+            
+            if (positionX >= 1340) {
+                speedX = -4.5
+            }
+            if (positionX <= 0) {
+                speedX = 4.5
+            }
+            if (positionY >= 575) {
+                speedY = -5
+            }
+            if (positionY <= 0) {
+                speedY = 5
+            }
+        }
+
+    </script>
+</body>
+
+</html>
