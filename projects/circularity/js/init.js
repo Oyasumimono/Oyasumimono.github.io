@@ -57,11 +57,11 @@ var init = function (window) {
         */
         function update() {}
             // TODO 4 : Update the position of each circle using physikz.updatePosition()
-            physikz.updatePosition([0]);
-            physikz.updatePosition([1]);
-            physikz.updatePosition([2]);
-            physikz.updatePosition([3]);
-            physikz.updatePosition([4]);
+            physikz.updatePosition(circles[0]);
+            physikz.updatePosition(circles[1]);
+            physikz.updatePosition(circles[2]);
+            physikz.updatePosition(circles[3]);
+            physikz.updatePosition(circles[4]);
         
 
             
@@ -90,7 +90,7 @@ var init = function (window) {
             }
             
             // TODO 6 : YOUR CODE STARTS HERE //////////////////////
-            if()
+            if(circle.x )
 
 
             // YOUR TODO 6 CODE ENDS HERE //////////////////////////
