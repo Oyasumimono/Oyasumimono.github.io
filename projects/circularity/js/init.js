@@ -66,11 +66,11 @@ var init = function (window) {
 
             
             // TODO 5 : Call game.checkCirclePosition() on your circles
-            game.checkCirclePosition([0]);
-            game.checkCirclePosition([1]);
-            game.checkCirclePosition([2]);
-            game.checkCirclePosition([3]);
-            game.checkCirclePosition([4]);
+            game.checkCirclePosition(circles[0]);
+            game.checkCirclePosition(circles[1]);
+            game.checkCirclePosition(circles[2]);
+            game.checkCirclePosition(circles[3]);
+            game.checkCirclePosition(circles[4]);
 
             // TODO 8 / TODO 9 : Iterate over the array
            
@@ -90,7 +90,7 @@ var init = function (window) {
             }
             
             // TODO 6 : YOUR CODE STARTS HERE //////////////////////
-            
+            if()
 
 
             // YOUR TODO 6 CODE ENDS HERE //////////////////////////
