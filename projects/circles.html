@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Circle Wowie</title>
+</head>
+
+<body>
+    <canvas id="canvas" height="800" width="1300"> </canvas>
+
+
+</body>
+
+</html>
+<script>
+    
+    var posX = 100
+    var posY = 100
+    var posW = 100
+    var posH = 100
+    var speedX = 10
+    var speedY = 10
+    var c = document.getElementById("canvas");
+    var ctx = c.getContext("2d");
+    setInterval(main, 50)
+    function main() {
+        ctx.clearRect(0, 0, 2000, 2000)
+        ctx.fillRect(posX, posY, posW, posH)
+        if (posX > 1200) {
+            speedX = speedX * -1
+        }
+        if (posX < 0) {
+           speedX = speedX * -1
+        }
+        if (posY < 0) {
+           speedY = speedY * -1
+        }
+        if (posY > 500) {
+           speedY = speedY * -1
+        }
+        posX = posX + speedX
+        posY = posY + speedY
+        posW = posW //+ funni num//
+        posH = posH //+ funni num//
+
+    }
+</script>
