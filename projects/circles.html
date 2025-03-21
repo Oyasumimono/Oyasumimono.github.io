@@ -15,35 +15,52 @@
 
 </html>
 <script>
-    
-    var posX = 100
-    var posY = 100
-    var posW = 100
-    var posH = 100
-    var speedX = 10
-    var speedY = 10
+
+    var posX = []
+    var posY = []
+    var posW = []
+    var radius = []
+    var speedX = []
+    var speedY = []
+    for (var i = 0; i < 1000; i = i + 1) {
+        posX[i] = Math.random() * 1000
+        posY[i] = Math.random() * 800
+        radius[i] = Math.random() * 20
+        speedX[i] = Math.random() * 30 - 15
+        speedY[i] = Math.random() * 30 - 15
+    }
+
     var c = document.getElementById("canvas");
     var ctx = c.getContext("2d");
+
     setInterval(main, 50)
     function main() {
-        ctx.clearRect(0, 0, 2000, 2000)
-        ctx.fillRect(posX, posY, posW, posH)
-        if (posX > 1200) {
-            speedX = speedX * -1
-        }
-        if (posX < 0) {
-           speedX = speedX * -1
-        }
-        if (posY < 0) {
-           speedY = speedY * -1
-        }
-        if (posY > 500) {
-           speedY = speedY * -1
-        }
-        posX = posX + speedX
-        posY = posY + speedY
-        posW = posW //+ funni num//
-        posH = posH //+ funni num//
 
+        ctx.clearRect(0, 0, 2000, 2000)
+
+        for (var i = 0; i < 1000; i = i + 1) {
+
+            ctx.fillStyle="purple"
+            ctx.beginPath()
+            ctx.arc(posX[i], posY[i], radius[i], 0, 7)
+            ctx.fill()
+        
+            if (posX[i] > 1300) {
+                speedX[i] = speedX[i] * -1
+            }
+            if (posX[i] < 0) {
+                speedX[i] = speedX[i] * -1
+            }
+            if (posY[i] < 0) {
+                speedY[i] = speedY[i] * -1
+            }
+            if (posY[i] > 800) {
+                speedY[i] = speedY[i] * -1
+            }
+
+            posX[i] = posX[i] + speedX[i]
+            posY[i] = posY[i] + speedY[i]
+
+        }
     }
 </script>
